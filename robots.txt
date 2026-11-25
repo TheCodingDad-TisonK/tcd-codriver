@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thecodingdad-tisonk.github.io/tcd-codriver/sitemap.xml

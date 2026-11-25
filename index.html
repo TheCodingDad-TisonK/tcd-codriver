@@ -3,22 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'; connect-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; connect-src 'none'">
 <meta name="referrer" content="no-referrer">
 <title>TCD Co-Driver - a co-driver for Euro Truck Simulator 2 and American Truck Simulator</title>
 <meta name="description" content="A plugin for ETS2 and ATS that puts a heads-up display, live truck and job data and a delivery logbook inside the game. Free for 14 days, then $5 per month.">
 <meta property="og:title" content="TCD Co-Driver: a co-driver for your cab">
 <meta property="og:description" content="A heads-up display, live truck and job data and a delivery logbook for ETS2 and ATS.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://thecodingdad-tisonk.github.io/tcd-codriver/">
+<meta property="og:site_name" content="TCD Co-Driver">
+<meta property="og:image" content="https://thecodingdad-tisonk.github.io/tcd-codriver/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f5a524">
+<link rel="canonical" href="https://thecodingdad-tisonk.github.io/tcd-codriver/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f5a524'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='800' font-size='12' text-anchor='middle' fill='%231a1102'%3ETCD%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"SoftwareApplication","name":"TCD Co-Driver","applicationCategory":"Game","operatingSystem":"Windows","description":"A co-driver HUD, dashboard, driving coach and delivery logbook for Euro Truck Simulator 2 and American Truck Simulator.","url":"https://thecodingdad-tisonk.github.io/tcd-codriver/","image":"https://thecodingdad-tisonk.github.io/tcd-codriver/assets/og-image.png","offers":{"@type":"Offer","price":"5","priceCurrency":"USD","description":"Free for 14 days, then $5 per month."}},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"What do I need?","acceptedAnswer":{"@type":"Answer","text":"Euro Truck Simulator 2 or American Truck Simulator on Windows, and a free license key from the account page."}},
+  {"@type":"Question","name":"How does payment work?","acceptedAnswer":{"@type":"Answer","text":"After the trial you pay $5 per month through PayPal from your account page and enter the transaction ID. Nothing is charged automatically; each payment adds 30 days."}},
+  {"@type":"Question","name":"Does it need internet while I drive?","acceptedAnswer":{"@type":"Answer","text":"It checks in at start and every few hours, then works offline for up to a week."}}
+ ]}
+]}
+</script>
 </head>
 <body>
 <div class="wrap">
 <header>
   <a class="brand" href="#top"><span class="mark" aria-hidden="true">TCD</span>TCD Co-Driver</a>
   <nav aria-label="Main">
-    <a href="#about">What it is</a><a href="#features">Features</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="contact.html">Contact</a>
+    <a href="#about">What it is</a><a href="#features">Features</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs">Docs</a><a href="contact.html">Contact</a>
     <a class="btn small ghost" href="https://unhistorical-subglobular-marhta.ngrok-free.dev/login">Log in</a>
     <a class="btn small" href="https://unhistorical-subglobular-marhta.ngrok-free.dev/register">Get a free key</a>
     
@@ -28,16 +44,17 @@
 <main id="top">
 <div class="hero">
   <span class="eyebrow">For Euro Truck Simulator 2 and American Truck Simulator</span>
-  <h1>A co-driver for your cab.</h1>
+  <h1>Your ETS2 &amp; ATS co-driver, inside the cab.</h1>
   <p class="lede">TCD Co-Driver is a plugin that puts a clean heads-up display, live truck and job data and a logbook of every delivery inside the game. Free for 14 days, then $5 per month.</p>
   <div class="cta">
     <a class="btn" href="https://unhistorical-subglobular-marhta.ngrok-free.dev/register">Get my free key</a>
     
-    <a class="btn ghost" href="#about">What is it?</a>
+    <a class="btn ghost" href="#how">See how it works</a>
   </div>
-  <p class="fine">No card needed for the trial. Windows only.</p>
-  <div class="notice"><b>Early version 0.1.</b> This page describes what the plugin is built to do. The pictures are previews rendered with sample data, not recordings from the game, and the plugin is still being tested. Expect rough edges.</div>
-  <div class="shot"><img src="assets/hud.png" width="1600" height="900" alt="Preview of the heads-up display over a road, with sample data: speed in large digits, the speed limit sign, gear, rpm and fuel bars, and small status chips."></div>
+  <p class="fine">No card needed for the trial. Windows only. Install in about two minutes.</p>
+  <p class="fine">Expect two one-time checks: the license site may show an ngrok "Visit Site" page, and Windows may say "Windows protected your PC" because the plugin is not signed yet. <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs/blob/main/docs/faq.md">What to do (2 min)</a> &middot; the download's SHA-256 is on your account page.</p>
+  <div class="notice"><b>Early version 0.1.0.</b> This page describes what the plugin is built to do. The pictures are previews rendered with sample data, not recordings from the game, and the plugin is still being tested. Known limits: not yet run in the real game, multiplayer untested, coach score thresholds are estimates.</div>
+  <div class="shot"><img src="assets/hud.png" width="1920" height="1080" alt="Preview of the heads-up display over a road, with sample data: speed in large digits, the speed limit sign, gear, rpm and fuel bars, and small status chips."></div>
   <p class="cap">The heads-up display (preview with sample data)</p>
 </div>
 
@@ -54,10 +71,10 @@
       <h3>At a glance</h3>
       <ul class="plain">
         <li><b>For:</b> ETS2 and ATS on Windows</li>
-        <li><b>What you get:</b> a HUD, a live dashboard, a delivery logbook</li>
+        <li><b>What you get:</b> a HUD, a live dashboard, a driving coach and a delivery logbook</li>
         <li><b>Controls:</b> Delete opens the window, F7 shows or hides the HUD</li>
         <li><b>Cost:</b> 14 days free, then $5 per month</li>
-        <li><b>Version:</b> 0.1, early and in testing</li>
+        <li><b>Version:</b> 0.1.0, early and in testing</li>
       </ul>
     </div>
   </div>
@@ -70,11 +87,11 @@
     <div class="card"><h3>Heads-up display</h3><p>Big, sharp speed digits, the current speed limit, gear, rpm and fuel range. Warnings appear only when they matter: low fuel, parking brake, oil, temperature, battery, air pressure.</p></div>
     <div class="card"><h3>Live dashboard</h3><p>Truck condition (engine, transmission, cabin, chassis, wheels), fuel and range, and your current job with progress, deadline and cargo damage.</p></div>
     <div class="card"><h3>Delivery logbook</h3><p>Every finished job is saved on your computer with its route, income, distance and damage. Totals and income per kilometre at a glance.</p></div>
+    <div class="card"><h3>Driving coach</h3><p>Every trip is scored for economy, safety and smoothness, with a grade and ranked tips. The thresholds are first estimates and will be tuned with real drives.</p></div>
     <div class="card"><h3>Made to be adjusted</h3><p>Metric or imperial, HUD size, opacity and position. Your settings are saved between sessions.</p></div>
   </div>
   <p class="sub" style="margin:26px 0 14px">Coming next</p>
   <div class="grid">
-    <div class="card next"><span class="tag">Planned</span><h3>Driving coach</h3><p>A score for every trip: smooth braking and acceleration, speeding, fuel economy, idling, and a reminder before you need a rest stop. Tips after each delivery.</p></div>
     <div class="card next"><span class="tag">Planned</span><h3>Online history</h3><p>Keep your logbook and trip scores on your account, so they follow you to a new computer.</p></div>
   </div>
 </section>
@@ -83,9 +100,9 @@
   <h2>A look inside</h2>
   <p class="sub">The window opens with the overlay key, so it never gets in the way of driving. These are previews with sample data.</p>
   <div class="gallery">
-    <figure><img src="assets/dashboard.png" width="1280" height="760" alt="Preview of the dashboard tab with speed, engine, fuel and range tiles, truck condition bars and the current job (sample data)." loading="lazy"><figcaption>Dashboard: live data and your current job</figcaption></figure>
-    <figure><img src="assets/logbook.png" width="1280" height="760" alt="Preview of the logbook tab: totals for deliveries, distance and income, and a list of recent jobs (sample data)." loading="lazy"><figcaption>Logbook: every delivery, with totals</figcaption></figure>
-    <figure><img src="assets/license.png" width="1280" height="760" alt="Preview of the license tab showing an active license, days left, and a box for entering a key." loading="lazy"><figcaption>License: your key and the days left</figcaption></figure>
+    <figure><img src="assets/dashboard.png" width="1920" height="1080" alt="Preview of the dashboard tab with speed, engine, fuel and range tiles, truck condition bars and the current job (sample data)." loading="lazy"><figcaption>Dashboard: live data and your current job</figcaption></figure>
+    <figure><img src="assets/logbook.png" width="1920" height="1080" alt="Preview of the logbook tab: totals for deliveries, distance and income, and a list of recent jobs (sample data)." loading="lazy"><figcaption>Logbook: every delivery, with totals</figcaption></figure>
+    <figure><img src="assets/license.png" width="1920" height="1080" alt="Preview of the license tab showing an active license, days left, and a box for entering a key." loading="lazy"><figcaption>License: your key and the days left</figcaption></figure>
   </div>
 </section>
 
@@ -97,12 +114,14 @@
     <div class="card"><h3>2. Your key</h3><p>You need a license key. The plugin checks it with our license server when the game starts and every few hours. In between it works offline for up to a week, so a short outage never interrupts a drive.</p></div>
     <div class="card"><h3>3. The controls</h3><p>Delete opens the overlay window, which also gives you the mouse. F7 shows or hides the HUD. Both can be changed in the framework's key bind page.</p></div>
   </div>
-  <p class="sub" style="margin:30px 0 14px">Getting started</p>
+  <p class="sub" style="margin:30px 0 14px">Getting started — about two minutes</p>
   <ol class="steps">
-    <li><b>Create a free account</b><span>Confirm your email and your key is ready on your account page.</span></li>
-    <li><b>Install the plugin</b><span>Run the installer. The game asks once whether to allow the plugin, which is a normal part of how it handles plugins.</span></li>
-    <li><b>Paste your key</b><span>Open the overlay in the game, go to License and press Activate. Your trial days start now.</span></li>
+    <li><b>Create a free account</b><span>Confirm your email, then you will also type the password you chose. Your key is on the account page, together with the download and its SHA-256.</span></li>
+    <li><b>Install the plugin</b><span>Download the zip, extract it and run <code>Install.bat</code>. It asks before copying anything. If Windows shows "Windows protected your PC", choose More info &rarr; Run anyway, and check the hash shown on your account page.</span></li>
+    <li><b>Allow the SDK features</b><span>The first time you start the game it asks whether to allow "advanced SDK features". Choose Yes — plugins need this to read telemetry.</span></li>
+    <li><b>Activate your key</b><span>Press <code>Delete</code> in the game, open the License tab, paste your key and press Activate. Your trial days start now. <code>F7</code> shows or hides the HUD.</span></li>
   </ol>
+  <p class="fine"><a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs/blob/main/docs/installation.md">Open the full installation guide</a> &middot; no separate framework install is needed — hry-core ships in the zip.</p>
 </section>
 
 <section id="pricing">
@@ -114,40 +133,58 @@
       <a class="btn" href="https://unhistorical-subglobular-marhta.ngrok-free.dev/register">Start the trial</a></div>
     <div class="card hl"><h3>Subscription</h3><div class="big">$5 per month</div>
       <ul><li>Continue without a break</li><li>One computer per key</li><li>Your account and settings are kept if you stop</li></ul>
-      <span class="fine">Payments open soon.</span></div>
+      <span class="fine">After the trial: $5 per month, paid by PayPal. No automatic renewal — each payment adds 30 days. Your key is extended by hand, usually within a day or two. <a href="terms.html">Terms</a> &middot; <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs/blob/main/docs/licensing.md">How payment works</a>.</span></div>
   </div>
 </section>
 
 <section id="good">
-  <h2>Good to know</h2>
+  <h2>Open and honest about this beta</h2>
   <ul class="plain">
-    <li><b>Early software.</b> Version 0.1 is still in testing. Report problems and expect updates.</li>
+    <li><b>Early software.</b> Version 0.1.0 is still in testing and has not yet been run in the real game. The coach score thresholds are first estimates. Report problems and expect updates.</li>
     <li><b>Windows only.</b> The plugin uses the game's Windows plugin system.</li>
-    <li><b>Multiplayer is untested.</b> Check the rules of any multiplayer service before using any plugin on it.</li>
-    <li><b>What we store.</b> Your email address, your key, and an anonymous code that identifies the computer the key is used on. You will be able to delete your account from your account page.</li>
+    <li><b>The license server is a home PC.</b> Sign-up and license checks run from the developer's computer through a tunnel. It should be up during normal hours, but brief outages can happen. A working license keeps running offline for up to a week; use "Check again" on the License tab if needed.</li>
+    <li><b>Unsigned plugin.</b> Windows may warn about an unverified publisher. The zip's SHA-256 is on your account page so you can check the download. Code signing is planned.</li>
+    <li><b>Refunds.</b> Try everything for 14 days. If a paid key is not sorted out, contact us within 14 days for a fix or refund; see the <a href="terms.html">terms</a>.</li>
+    <li><b>Multiplayer is untested.</b> Check the rules of any multiplayer service before using any plugin on it. The plugin only reads telemetry and does not change gameplay.</li>
+    <li><b>What we store.</b> Your email address, your key, and a one-way hash of your computer ID. The logbook, scores and settings stay on your computer; there is no analytics. You can delete your account at any time.</li>
+    <li><b>Who runs this.</b> Built and supported by TheCodingDad (Tison Klomp), an individual in the Netherlands. See the <a href="legal-notice.html">legal notice</a>.</li>
     <li><b>Not affiliated with SCS Software.</b> This is an independent plugin. Euro Truck Simulator 2 and American Truck Simulator are trademarks of SCS Software.</li>
   </ul>
 </section>
 
 <section id="faq">
-  <h2>Questions</h2>
+  <h2>Frequently asked questions</h2>
   <details><summary>What do I need?</summary><p>Euro Truck Simulator 2 or American Truck Simulator on Windows. The installer adds the plugin and the small open-source framework it runs on.</p></details>
   <details><summary>What happens when the trial ends?</summary><p>The key stops and we send you an email. Your account stays, and you can continue with a subscription whenever you like.</p></details>
+  <details><summary>How does payment work?</summary><p>You pay $5 to our PayPal.me link from your account page, press "I have paid" and enter the transaction ID. We check it and extend your key by 30 days, usually within a day or two. Nothing is charged automatically. If something is wrong, contact us within 14 days for a fix or refund. <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs/blob/main/docs/licensing.md">Full payment guide</a>.</p></details>
+  <details><summary>Windows says "Windows protected your PC" — is this safe?</summary><p>The plugin is not digitally signed yet. If you downloaded the zip from your account page, choose More info &rarr; Run anyway and compare its SHA-256 with the hash shown there. Signing is planned.</p></details>
+  <details><summary>The license site shows an ngrok "Visit Site" warning</summary><p>The site runs through a free ngrok tunnel, which shows an anti-abuse page once per browser every 7 days. Click Visit Site to continue. The plugin's own license checks are not affected.</p></details>
   <details><summary>How many computers can use one key?</summary><p>One. If you get a new computer, contact support and the key can be moved.</p></details>
-  <details><summary>Does it need internet while I drive?</summary><p>It checks in when the game starts and every few hours. In between it works offline for up to a week.</p></details>
+  <details><summary>Does it need internet while I drive?</summary><p>It checks in when the game starts and every few hours. In between it works offline for up to a week. The License tab shows your key's days and you can press "Check again".</p></details>
+  <details><summary>What if the license server is offline?</summary><p>A working license keeps running offline for up to a week. Brief outages can happen because the server runs from a home PC. Try again later and use "Check again" on the License tab.</p></details>
   <details><summary>Does it work in multiplayer?</summary><p>That has not been tested yet. Check the rules of the service you play on first.</p></details>
-  <details><summary>Where is my logbook kept?</summary><p>On your own computer, in a plain text file. An online copy is planned for later.</p></details>
+  <details><summary>Where is my logbook kept?</summary><p>On your own computer in <code>%LOCALAPPDATA%\TcdCoDriver\logbook.tsv</code>. You can export a CSV in any language from the Logbook tab. An online copy is planned for later.</p></details>
+  <details><summary>How do I uninstall it?</summary><p>Run <code>Uninstall.bat</code> from the extracted zip. It removes only the plugin file and asks before touching your logbook or settings. See the <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs/blob/main/docs/installation.md">installation guide</a>.</p></details>
+  <details><summary>How do I get help?</summary><p>Use the contact form on this site. Attach the end of <code>Documents\hry_core\ets2\hry_core.log</code> (or <code>...\ats\hry_core.log</code>) right after the problem, plus a screenshot. Do not post keys or email addresses in public GitHub issues.</p></details>
+</section>
+
+<section id="updates">
+  <h2>What's new</h2>
+  <p class="sub">0.1.0: HUD, live dashboard, driving coach and a logbook with statistics and CSV export.</p>
+  <p><a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs/blob/main/docs/changelog.md">Full changelog</a> &middot; <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs#support">How to get help</a></p>
 </section>
 
 <div class="final">
-  <h2>Follow along</h2>
-  <p class="sub" style="margin-inline:auto">TCD Co-Driver is in active development. Sign-ups open soon, and this page will say so the moment they do.</p>
+  <h2>Ready to try it?</h2>
+  <p class="sub" style="margin-inline:auto">Create an account, get a free 14-day key and install in about two minutes. No card needed. Your days start when you first use the key in game.</p>
   <a class="btn" href="https://unhistorical-subglobular-marhta.ngrok-free.dev/register">Get my free key</a>
+  
+  <p class="fine" style="margin-top:14px">New here? <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs/blob/main/docs/installation.md">Read the installation guide first</a>.</p>
 </div>
 </main>
 
 <footer>
-  <span class="status"><span class="dot" aria-hidden="true"></span>Early version 0.1</span>
+  <span class="status"><span class="dot" aria-hidden="true"></span>Early version 0.1.0</span>
   <span>Built on <a href="https://github.com/Hary309/hry-core">hry-core</a> by Piotr Krupa (MIT license), Dear ImGui by Omar Cornut and MinHook by Tsuda Kageyu.</span>
   <span class="links"><a href="terms.html">Terms</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="legal-notice.html">Legal notice</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs">Documentation</a> &middot; <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver/issues">Report a problem</a></span>
   
