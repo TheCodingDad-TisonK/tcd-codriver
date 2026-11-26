@@ -34,7 +34,7 @@
 <header>
   <a class="brand" href="#top"><span class="mark" aria-hidden="true">TCD</span>TCD Co-Driver</a>
   <nav aria-label="Main">
-    <a href="#about">What it is</a><a href="#features">Features</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs">Docs</a><a href="contact.html">Contact</a>
+    <a href="#about">What it is</a><a href="#features">Features</a><a href="#screens">Screenshots</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs">Docs</a><a href="contact.html">Contact</a>
     <a class="btn small ghost" href="https://unhistorical-subglobular-marhta.ngrok-free.dev/login">Log in</a>
     <a class="btn small" href="https://unhistorical-subglobular-marhta.ngrok-free.dev/register">Get a free key</a>
     
@@ -53,9 +53,9 @@
   </div>
   <p class="fine">No card needed for the trial. Windows only. Install in about two minutes.</p>
   <p class="fine">Expect two one-time checks: the license site may show an ngrok "Visit Site" page, and Windows may say "Windows protected your PC" because the plugin is not signed yet. <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs/blob/main/docs/faq.md">What to do (2 min)</a> &middot; the download's SHA-256 is on your account page.</p>
-  <div class="notice"><b>Early version 0.3.0.</b> The pictures are previews rendered with sample data, not recordings from the game. Known limits: small tester group, multiplayer untested, coach score thresholds are estimates.</div>
+  <div class="notice"><b>Early version 0.3.0.</b> The pictures are previews rendered with sample data, not recordings from the game. Known limits: small tester group, multiplayer untested, coach score thresholds are estimates, and the new coach job and delivery HUDs of 0.3.0 still need real drives.</div>
   <div class="shot"><img src="assets/hud.png" width="1920" height="1080" alt="Preview of the heads-up display over a road, with sample data: the destination, the distance to go and a deadline chip, a ring with the cargo condition, the fuel left, and small status chips."></div>
-  <p class="cap">The heads-up display (preview with sample data)</p>
+  <p class="cap">The heads-up display on a delivery: destination, distance, deadline, cargo and fuel (preview with sample data)</p>
 </div>
 
 <section id="about">
@@ -70,8 +70,8 @@
     <div class="card">
       <h3>At a glance</h3>
       <ul class="plain">
-        <li><b>For:</b> ETS2 and ATS on Windows</li>
-        <li><b>What you get:</b> a HUD, a live dashboard, a driving coach and a delivery logbook</li>
+        <li><b>For:</b> ETS2 and ATS on Windows, including ETS2 Coaches DLC jobs</li>
+        <li><b>What you get:</b> a HUD that follows your job (delivery or coach), a live dashboard, a driving coach and a logbook of deliveries and coach jobs</li>
         <li><b>Controls:</b> Delete opens the window, F7 shows or hides the HUD</li>
         <li><b>Cost:</b> 14 days free, then $3 per month</li>
         <li><b>Version:</b> 0.3.0, early and in testing</li>
@@ -86,13 +86,15 @@
   <div class="grid">
     <div class="card"><h3>Heads-up display</h3><p>A HUD that follows your job. On a delivery it shows the destination, distance to go, the deadline, the cargo condition and the fuel, and on a coach job the next stop and the passengers' rating. The speed appears only when you are over the limit, and the speedometer HUD is back when you have no job. Warnings appear only when they matter: low fuel, parking brake, oil, temperature, battery, air pressure.</p></div>
     <div class="card"><h3>Live dashboard</h3><p>Truck condition (engine, transmission, cabin, chassis, wheels), fuel and range, and your current job with progress, deadline and cargo damage.</p></div>
+    <div class="card"><h3>ETS2 Coaches DLC</h3><p>A coach job shows the next stop and the timetable with planned and actual times, the passengers' rating with a chart of how it developed, a punctuality score and hints for the ride. Each coach job is saved in the logbook as a coach tour or a bus line.</p></div>
     <div class="card"><h3>Delivery logbook</h3><p>Every finished job, truck or coach, is saved on your computer with its route, income, distance and damage. Totals and income per kilometre at a glance.</p></div>
     <div class="card"><h3>Driving coach</h3><p>Every trip is scored for economy, safety and smoothness, with a grade and ranked tips. The thresholds are first estimates and will be tuned with real drives.</p></div>
-    <div class="card"><h3>Made to be adjusted</h3><p>Metric or imperial, HUD size, opacity and position. Your settings are saved between sessions.</p></div>
+    <div class="card"><h3>Made to be adjusted</h3><p>Metric or imperial, HUD size, opacity and position, and each job HUD can be switched off to bring back the classic speedometer. Your settings are saved between sessions.</p></div>
   </div>
   <p class="sub" style="margin:26px 0 14px">Coming next</p>
   <div class="grid">
     <div class="card next"><span class="tag">Planned</span><h3>Online history</h3><p>Keep your logbook and trip scores on your account, so they follow you to a new computer.</p></div>
+    <div class="card next"><span class="tag">Planned</span><h3>Calibrated coach scores</h3><p>Tune the punctuality score and the coach hints with real drives, so they match how a bus really runs.</p></div>
   </div>
 </section>
 
@@ -100,8 +102,11 @@
   <h2>A look inside</h2>
   <p class="sub">The window opens with the overlay key, so it never gets in the way of driving. These are previews with sample data.</p>
   <div class="gallery">
-    <figure><img src="assets/dashboard.png" width="1920" height="1080" alt="Preview of the dashboard tab with speed, engine, fuel and range tiles, truck condition bars and the current job (sample data)." loading="lazy"><figcaption>Dashboard: live data and your current job</figcaption></figure>
-    <figure><img src="assets/logbook.png" width="1920" height="1080" alt="Preview of the logbook tab: totals for deliveries, distance and income, and a list of recent jobs (sample data)." loading="lazy"><figcaption>Logbook: every delivery, with totals</figcaption></figure>
+    <figure><img src="assets/hud-coach.png" width="1920" height="1080" alt="Preview of the heads-up display during a coach job (sample data): the next stop with its arrival time and a late chip, a ring with the passengers' rating, and the on-time score. There is no speedometer." loading="lazy"><figcaption>On a coach job: next stop, passengers' rating and on-time score</figcaption></figure>
+    <figure><img src="assets/dashboard.png" width="1920" height="1080" alt="Preview of the dashboard tab with speed, engine, fuel and range tiles, truck condition bars, the current job and the coach score (sample data)." loading="lazy"><figcaption>Dashboard: live data and your current job</figcaption></figure>
+    <figure><img src="assets/coachjob.png" width="1920" height="1080" alt="Preview of the dashboard during a coach tour (sample data): passenger satisfaction with a chart of the rating over the job, status chips, and the timetable with planned and actual times and delays." loading="lazy"><figcaption>Dashboard on a coach job: rating chart and timetable</figcaption></figure>
+    <figure><img src="assets/logbook.png" width="1920" height="1080" alt="Preview of the logbook tab: a searchable list of deliveries and the full report of the selected one, with its driving score, money and trip details (sample data)." loading="lazy"><figcaption>Logbook: every delivery, with a full report</figcaption></figure>
+    <figure><img src="assets/logbook-coach.png" width="1920" height="1080" alt="Preview of the logbook with a coach tour selected (sample data): the passengers' rating, the on-time score, passengers carried, and what the job paid against what the game expected." loading="lazy"><figcaption>Logbook: coach jobs with rating, punctuality and expected income</figcaption></figure>
     <figure><img src="assets/license.png" width="1920" height="1080" alt="Preview of the license tab showing an active license, days left, and a box for entering a key." loading="lazy"><figcaption>License: your key and the days left</figcaption></figure>
   </div>
 </section>
@@ -156,6 +161,7 @@
   <h2>Frequently asked questions</h2>
   <details><summary>What do I need?</summary><p>Euro Truck Simulator 2 or American Truck Simulator on Windows. The installer adds the plugin and the small open-source framework it runs on.</p></details>
   <details><summary>Does it support the ETS2 Coaches DLC?</summary><p>Yes. During a coach job the Dashboard shows passenger satisfaction with a chart of how it developed, the current stop, the timetable with delays, a punctuality score, boarding and alighting counts and the expected income. The HUD changes too: instead of speed, gear and rpm it shows the next stop with its arrival time, the passengers' rating and your on-time score, and shows the speed only when you are over the limit (it can be turned off). When the job ends it is saved in the logbook with the rating, punctuality and passengers. The coach job features are new and being tuned. If you load a save already mid-job, the game may not send the stop details; the plugin still detects the coach job and shows satisfaction. Start a coach job after launching ETS2 for the full details.</p></details>
+  <details><summary>Why is there no speedometer on the HUD during a job?</summary><p>The truck and the coach already have a speedometer and turn signals in the cab. While you are on a delivery or a coach job the HUD shows what the cab does not: where you are going, the deadline or the timetable, how the cargo or the passengers are doing, and the fuel. The speed and the limit sign appear only when you are over the limit. With no job you get the classic speedometer HUD. Each job HUD can be switched off in Settings.</p></details>
   <details><summary>What happens when the trial ends?</summary><p>The key stops and we send you an email. Your account stays, and you can continue with a subscription whenever you like.</p></details>
   <details><summary>How does payment work?</summary><p>You pay $3 to our PayPal.me link from your account page, press "I have paid" and enter the transaction ID. We check it and extend your key by 30 days, usually within a day or two. Nothing is charged automatically. If something is wrong, contact us within 14 days for a fix or refund. <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs/blob/main/docs/licensing.md">Full payment guide</a>.</p></details>
   <details><summary>Windows says "Windows protected your PC": is this safe?</summary><p>The plugin is not digitally signed yet. If you downloaded the zip from your account page, choose More info &rarr; Run anyway and compare its SHA-256 with the hash shown there. Signing is planned.</p></details>
@@ -164,14 +170,14 @@
   <details><summary>Does it need internet while I drive?</summary><p>It checks in when the game starts and every few hours. In between it works offline for up to a week. The License tab shows your key's days and you can press "Check again".</p></details>
   <details><summary>What if the license server is offline?</summary><p>A working license keeps running offline for up to a week. Brief outages can happen because the server runs from a home PC. Try again later and use "Check again" on the License tab.</p></details>
   <details><summary>Does it work in multiplayer?</summary><p>That has not been tested yet. Check the rules of the service you play on first.</p></details>
-  <details><summary>Where is my logbook kept?</summary><p>On your own computer in <code>%LOCALAPPDATA%\TcdCoDriver\logbook.tsv</code>. You can export a CSV in any language from the Logbook tab. An online copy is planned for later.</p></details>
+  <details><summary>Where is my logbook kept?</summary><p>On your own computer in <code>%LOCALAPPDATA%\TcdCoDriver\logbook.tsv</code>, with every finished delivery and coach job. You can export a CSV in any language from the Logbook tab. An online copy is planned for later.</p></details>
   <details><summary>How do I uninstall it?</summary><p>Run <code>Uninstall.bat</code> from the extracted zip. It removes only the plugin file and asks before touching your logbook or settings. See the <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs/blob/main/docs/installation.md">installation guide</a>.</p></details>
   <details><summary>How do I get help?</summary><p>Use the contact form on this site. Attach the end of <code>Documents\hry_core\ets2\hry_core.log</code> (or <code>...\ats\hry_core.log</code>) right after the problem, plus a screenshot. Do not post keys or email addresses in public GitHub issues.</p></details>
 </section>
 
 <section id="updates">
   <h2>What's new</h2>
-  <p class="sub"><b>0.3.0 (26 Nov 2026):</b> the ETS2 Coaches DLC job now shows properly, with a timetable of stages, planned and actual times, delays and passengers, a punctuality score, a chart of the passengers' rating, coach hints, a HUD made for coach jobs (and one for deliveries), and every coach job is saved in the logbook. <b>0.2.0 (25 Nov 2026):</b> ETS2 Coaches DLC support (passenger satisfaction), dashboard instruments and trailer readouts, per-game currency in the logbook, a Changelog tab, and a clickable help link. Version 0.1.0 introduced the HUD, live dashboard, driving coach and logbook with statistics and CSV export.</p>
+  <p class="sub"><b>0.3.0 (26 Nov 2026):</b> a HUD that follows your job. On a delivery it shows the destination, distance, deadline, cargo condition and fuel, and on an ETS2 Coaches DLC job the next stop, the passengers' rating and an on-time score. The speed appears only when you are over the limit, there are no turn signals, and the classic HUD returns when you have no job. The coach job now shows properly, with a timetable of stages, planned and actual times, delays and passengers, a punctuality score, a chart of the passengers' rating and coach hints, and every coach job is saved in the logbook. <b>0.2.0 (25 Nov 2026):</b> ETS2 Coaches DLC support (passenger satisfaction), dashboard instruments and trailer readouts, per-game currency in the logbook, a Changelog tab, and a clickable help link. Version 0.1.0 introduced the HUD, live dashboard, driving coach and logbook with statistics and CSV export.</p>
   <p><a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs/blob/main/docs/changelog.md">Full changelog</a> &middot; <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs#support">How to get help</a></p>
 </section>
 
