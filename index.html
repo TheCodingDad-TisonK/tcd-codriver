@@ -12,15 +12,15 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thecodingdad-tisonk.github.io/tcd-codriver/">
 <meta property="og:site_name" content="TCD Co-Driver">
-<meta property="og:image" content="https://thecodingdad-tisonk.github.io/tcd-codriver/assets/og-image.png?v=b56144d7">
+<meta property="og:image" content="https://thecodingdad-tisonk.github.io/tcd-codriver/assets/og-image.png?v=dd640fbd">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#f5a524">
 <link rel="canonical" href="https://thecodingdad-tisonk.github.io/tcd-codriver/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f5a524'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='800' font-size='12' text-anchor='middle' fill='%231a1102'%3ETCD%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/site.css?v=e9369669">
+<link rel="stylesheet" href="assets/site.css?v=e2321be4">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
- {"@type":"SoftwareApplication","name":"TCD Co-Driver","applicationCategory":"Game","operatingSystem":"Windows","description":"A co-driver HUD, dashboard, driving coach and delivery logbook for Euro Truck Simulator 2 and American Truck Simulator.","url":"https://thecodingdad-tisonk.github.io/tcd-codriver/","image":"https://thecodingdad-tisonk.github.io/tcd-codriver/assets/og-image.png?v=b56144d7","offers":{"@type":"Offer","price":"3","priceCurrency":"USD","description":"Free for 14 days, then $3 per month."}},
+ {"@type":"SoftwareApplication","name":"TCD Co-Driver","applicationCategory":"Game","operatingSystem":"Windows","description":"A co-driver HUD, dashboard, driving coach and delivery logbook for Euro Truck Simulator 2 and American Truck Simulator.","url":"https://thecodingdad-tisonk.github.io/tcd-codriver/","image":"https://thecodingdad-tisonk.github.io/tcd-codriver/assets/og-image.png?v=dd640fbd","offers":{"@type":"Offer","price":"3","priceCurrency":"USD","description":"Free for 14 days, then $3 per month."}},
  {"@type":"FAQPage","mainEntity":[
   {"@type":"Question","name":"What do I need?","acceptedAnswer":{"@type":"Answer","text":"Euro Truck Simulator 2 or American Truck Simulator on Windows, and a free license key from the account page."}},
   {"@type":"Question","name":"How does payment work?","acceptedAnswer":{"@type":"Answer","text":"After the trial you pay $3 per month through PayPal from your account page and enter the transaction ID. Nothing is charged automatically; each payment adds 30 days."}},
@@ -45,7 +45,7 @@
 <div class="hero">
   <span class="eyebrow">For Euro Truck Simulator 2 and American Truck Simulator</span>
   <h1>Your ETS2 &amp; ATS co-driver, inside the cab.</h1>
-  <p class="lede">TCD Co-Driver is a plugin that puts a clean heads-up display, live truck and job data and a logbook of every delivery inside the game. Free for 14 days, then $3 per month.</p>
+  <p class="lede">TCD Co-Driver is a plugin that puts a clean heads-up display, a live trip assistant, a driving coach and a logbook with route maps inside the game. Free for 14 days, then $3 per month.</p>
   <div class="cta">
     <a class="btn" href="https://unhistorical-subglobular-marhta.ngrok-free.dev/register">Get my free key</a>
     
@@ -53,9 +53,9 @@
   </div>
   <p class="fine">No card needed for the trial. Windows only. Install in about two minutes.</p>
   <p class="fine">Expect two one-time checks: the license site may show an ngrok "Visit Site" page, and Windows may say "Windows protected your PC" because the plugin is not signed yet. <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs/blob/main/docs/faq.md">What to do (2 min)</a> &middot; the download's SHA-256 is on your account page.</p>
-  <div class="notice"><b>Early version 0.3.0.</b> The pictures are previews rendered with sample data, not recordings from the game. Known limits: small tester group, multiplayer untested, coach score thresholds are estimates, and the new coach job and delivery HUDs of 0.3.0 still need real drives.</div>
-  <div class="shot"><img src="assets/hud.png?v=2455a4c0" width="1920" height="1080" alt="Preview of the heads-up display over a road, with sample data: the destination, the distance to go and a deadline chip, a ring with the cargo condition, the fuel left, and small status chips."></div>
-  <p class="cap">The heads-up display on a delivery: destination, distance, deadline, cargo and fuel (preview with sample data)</p>
+  <div class="notice"><b>Early version 0.4.0.</b> The pictures are previews rendered with sample data, not recordings from the game. Known limits: small tester group, multiplayer untested, coach score thresholds are estimates, and most of what is new in 0.4.0 (the trip assistant, route maps, the deeper coach and the layout editor) has been tested with automated tests and a driving simulator but still needs real drives.</div>
+  <div class="shot"><img src="assets/hud.png?v=0bbb41e2" width="1500" height="800" alt="Preview of the heads-up display over a road, with sample data: the destination, the distance to go and a deadline chip, a ring with the cargo condition, the fuel left, a trip assistant line saying what average speed is needed to arrive on time, and pop-up cards for a fine, a toll and cargo damage."></div>
+  <p class="cap">The heads-up display on a delivery: destination, deadline, cargo and fuel, a live trip assistant, and pop-up cards for fines and tolls (preview with sample data)</p>
 </div>
 
 <section id="about">
@@ -71,10 +71,10 @@
       <h3>At a glance</h3>
       <ul class="plain">
         <li><b>For:</b> ETS2 and ATS on Windows, including ETS2 Coaches DLC jobs</li>
-        <li><b>What you get:</b> a HUD that follows your job (delivery or coach), a live dashboard, a driving coach and a logbook of deliveries and coach jobs</li>
+        <li><b>What you get:</b> a HUD that follows your job, a live trip assistant, a driving coach, a route map and report for every trip, a driver level with badges and challenges, and a logbook of deliveries and coach jobs</li>
         <li><b>Controls:</b> Delete opens the window, F7 shows or hides the HUD</li>
         <li><b>Cost:</b> 14 days free, then $3 per month</li>
-        <li><b>Version:</b> 0.3.0, early and in testing</li>
+        <li><b>Version:</b> 0.4.0, early and in testing</li>
       </ul>
     </div>
   </div>
@@ -84,18 +84,21 @@
   <h2>What it does</h2>
   <p class="sub">Built for the way you drive: glanceable while the truck moves, detailed when you stop.</p>
   <div class="grid">
-    <div class="card"><h3>Heads-up display</h3><p>A HUD that follows your job. On a delivery it shows the destination, distance to go, the deadline, the cargo condition and the fuel, and on a coach job the next stop and the passengers' rating. The speed appears only when you are over the limit, and the speedometer HUD is back when you have no job. Warnings appear only when they matter: low fuel, parking brake, oil, temperature, battery, air pressure.</p></div>
-    <div class="card"><h3>Live dashboard</h3><p>Truck condition (engine, transmission, cabin, chassis, wheels), fuel and range, and your current job with progress, deadline and cargo damage.</p></div>
+    <div class="card"><h3>Heads-up display</h3><p>A HUD that follows your job. On a delivery it shows the destination, distance to go, the deadline, the cargo condition and the fuel, and on a coach job the next stop and the passengers' rating. The speed appears only when you are over the limit, and the speedometer HUD is back when you have no job. Warnings appear only when they matter: low fuel, parking brake, oil, temperature, battery, air pressure. Pop-up cards tell you what a fine, a toll, a ferry or cargo damage just cost.</p></div>
+    <div class="card"><h3>Live trip assistant</h3><p>The average speed you need to arrive on time, a rest that falls due before you arrive, whether your fuel reaches the destination and what a full tank costs, and a warning when a speeding fine is likely. On the HUD and on the Dashboard.</p></div>
+    <div class="card"><h3>Route map and replay</h3><p>Every trip keeps its route. The logbook draws it, marks the fines, tolls, ferries, hard braking and cargo damage on it, and adds charts of the speed and the fuel along the way. When you stop after a delivery a large summary shows the route, the score and the money.</p></div>
+    <div class="card"><h3>Driving coach</h3><p>Every trip is scored for economy, safety, smoothness and now technique: steering at speed, gears and engine braking, brake temperature, parking and reversing, and rough roads. A grade, ranked tips, and a comparison with your own recent trips. The thresholds are first estimates and will be tuned with real drives.</p></div>
+    <div class="card"><h3>Home, Insights and Profile</h3><p>A home page with your week and three weekly challenges. Reports for the week, the month and all time, charts, an income goal and what the money goes on. A driver level, 20 badges, clean-job streaks and your personal bests.</p></div>
+    <div class="card"><h3>Delivery logbook</h3><p>Every finished job, truck or coach, is saved on your computer with its route, income, distance and damage. Compare any trip with your last ten and your best, and share a trip card as a page you can keep or screenshot.</p></div>
     <div class="card"><h3>ETS2 Coaches DLC</h3><p>A coach job shows the next stop and the timetable with planned and actual times, the passengers' rating with a chart of how it developed, a punctuality score and hints for the ride. Each coach job is saved in the logbook as a coach tour or a bus line.</p></div>
-    <div class="card"><h3>Delivery logbook</h3><p>Every finished job, truck or coach, is saved on your computer with its route, income, distance and damage. Totals and income per kilometre at a glance.</p></div>
-    <div class="card"><h3>Driving coach</h3><p>Every trip is scored for economy, safety and smoothness, with a grade and ranked tips. The thresholds are first estimates and will be tuned with real drives.</p></div>
-    <div class="card"><h3>Made to be adjusted</h3><p>Metric or imperial, HUD size, opacity and position, and each job HUD can be switched off to bring back the classic speedometer. Your settings are saved between sessions.</p></div>
+    <div class="card"><h3>Live dashboard</h3><p>Truck condition, fuel and range, the trip assistant and your current job with progress, deadline and cargo damage. Move the sections up or down, or hide the ones you do not need.</p></div>
+    <div class="card"><h3>Made to be yours</h3><p>Six colour themes, a drag-and-drop layout editor for every part of the HUD, a HUD that dims at night, settings profiles you can save and switch between, and hover help on the numbers. Metric or imperial. Everything is saved between sessions.</p></div>
   </div>
   <p class="sub" style="margin:26px 0 14px">Coming next</p>
   <div class="grid">
     <div class="card next"><span class="tag">Planned</span><h3>Online history</h3><p>Keep your logbook and trip scores on your account, so they follow you to a new computer.</p></div>
     <div class="card next"><span class="tag">Planned</span><h3>Calibrated coach scores</h3><p>Tune the punctuality score and the coach hints with real drives, so they match how a bus really runs.</p></div>
-    <div class="card next"><span class="tag">Planned</span><h3>More logbook statistics</h3><p>More charts and totals in the logbook: per truck, per cargo type, and your fuel cost over time.</p></div>
+    <div class="card next"><span class="tag">Planned</span><h3>More statistics</h3><p>Deeper breakdowns on the Insights page, building on the reports and charts that are there now.</p></div>
     <div class="card next"><span class="tag">Planned</span><h3>Coach job settlements</h3><p>Coach job money in more detail in the logbook: what jobs paid against what the game expected, over time and per kind of job.</p></div>
     <div class="card next"><span class="tag">Planned</span><h3>Translations</h3><p>The window and the HUD in more languages than English.</p></div>
   </div>
@@ -105,12 +108,19 @@
   <h2>A look inside</h2>
   <p class="sub">The window opens with the overlay key, so it never gets in the way of driving. These are previews with sample data.</p>
   <div class="gallery">
-    <figure><img src="assets/hud-coach.png?v=0f41db17" width="1920" height="1080" alt="Preview of the heads-up display during a coach job (sample data): the next stop with its arrival time and a late chip, a ring with the passengers' rating, and the on-time score. There is no speedometer." loading="lazy"><figcaption>On a coach job: next stop, passengers' rating and on-time score</figcaption></figure>
-    <figure><img src="assets/dashboard.png?v=d5d3ccd5" width="1920" height="1080" alt="Preview of the dashboard tab with speed, engine, fuel and range tiles, truck condition bars, the current job and the coach score (sample data)." loading="lazy"><figcaption>Dashboard: live data and your current job</figcaption></figure>
-    <figure><img src="assets/coachjob.png?v=4cd3d113" width="1920" height="1080" alt="Preview of the dashboard during a coach tour (sample data): passenger satisfaction with a chart of the rating over the job, status chips, and the timetable with planned and actual times and delays." loading="lazy"><figcaption>Dashboard on a coach job: rating chart and timetable</figcaption></figure>
-    <figure><img src="assets/logbook.png?v=3672a00d" width="1920" height="1080" alt="Preview of the logbook tab: a searchable list of deliveries and the full report of the selected one, with its driving score, money and trip details (sample data)." loading="lazy"><figcaption>Logbook: every delivery, with a full report</figcaption></figure>
-    <figure><img src="assets/logbook-coach.png?v=2f168b40" width="1920" height="1080" alt="Preview of the logbook with a coach tour selected (sample data): the passengers' rating, the on-time score, passengers carried, and what the job paid against what the game expected." loading="lazy"><figcaption>Logbook: coach jobs with rating, punctuality and expected income</figcaption></figure>
-    <figure><img src="assets/license.png?v=b03efbba" width="1920" height="1080" alt="Preview of the license tab showing an active license, days left, and a box for entering a key." loading="lazy"><figcaption>License: your key and the days left</figcaption></figure>
+    <figure><a href="assets/home.png?v=7ee79319" target="_blank" rel="noopener"><img src="assets/home.png?v=7ee79319" width="1180" height="820" alt="Preview of the Home page (sample data): a driver level with experience and badges, what is new, the week's net income against a goal, jobs, average score, three weekly challenges and the route of the last trip." loading="lazy"></a><figcaption>Home: your level, your week and this week's challenges</figcaption></figure>
+    <figure><a href="assets/logbook.png?v=912c003e" target="_blank" rel="noopener"><img src="assets/logbook.png?v=912c003e" width="1180" height="820" alt="Preview of the logbook (sample data): a searchable list of deliveries and the report of the selected one, with a route map marking where the truck was over the limit and braked hard, and charts of speed and fuel along the trip." loading="lazy"></a><figcaption>Logbook: every delivery with its route map and charts</figcaption></figure>
+    <figure><a href="assets/summary.png?v=31b01f9f" target="_blank" rel="noopener"><img src="assets/summary.png?v=31b01f9f" width="800" height="556" alt="Preview of the large summary card shown when the truck stops after a delivery (sample data): the route, the score, the net income, how the trip compares with the last ten, and a level-up." loading="lazy"></a><figcaption>When you stop: the route, the score and the money</figcaption></figure>
+    <figure><a href="assets/coach.png?v=cb25774c" target="_blank" rel="noopener"><img src="assets/coach.png?v=cb25774c" width="1180" height="820" alt="Preview of the Coach tab (sample data): the trip score with economy, safety, smoothness and technique, tips to improve, and tiles for steering, gears, brake heat, parking and rough road." loading="lazy"></a><figcaption>Coach: four scores and what they are made of</figcaption></figure>
+    <figure><a href="assets/dashboard.png?v=b451432d" target="_blank" rel="noopener"><img src="assets/dashboard.png?v=b451432d" width="1180" height="820" alt="Preview of the Dashboard (sample data): speed, engine, fuel and range tiles and the trip assistant card with what is needed to arrive on time." loading="lazy"></a><figcaption>Dashboard: live data and the trip assistant</figcaption></figure>
+    <figure><a href="assets/insights.png?v=8e9dea47" target="_blank" rel="noopener"><img src="assets/insights.png?v=8e9dea47" width="1180" height="820" alt="Preview of the Insights page (sample data): the week, the month and all time against the period before, with an income goal." loading="lazy"></a><figcaption>Insights: reports for the week, the month and all time</figcaption></figure>
+    <figure><a href="assets/profile.png?v=c04b060b" target="_blank" rel="noopener"><img src="assets/profile.png?v=c04b060b" width="1180" height="820" alt="Preview of the Profile page (sample data): a driver level and title, 20 badges with progress, a clean-job streak and personal bests." loading="lazy"></a><figcaption>Profile: level, badges, streaks and personal bests</figcaption></figure>
+    <figure><a href="assets/compare.png?v=65a9947a" target="_blank" rel="noopener"><img src="assets/compare.png?v=65a9947a" width="1180" height="820" alt="Preview of the Compare view in the logbook (sample data): one trip set against the ten before it and against the best." loading="lazy"></a><figcaption>Compare: a trip against your recent trips and your best</figcaption></figure>
+    <figure><a href="assets/layout.png?v=647d9c06" target="_blank" rel="noopener"><img src="assets/layout.png?v=647d9c06" width="1440" height="1000" alt="Preview of the HUD layout editor (sample data): the parts of the HUD outlined on the screen with a box of sliders to resize or hide each one." loading="lazy"></a><figcaption>Layout editor: put every part of the HUD where you want it</figcaption></figure>
+    <figure><a href="assets/themes.png?v=05ac1a37" target="_blank" rel="noopener"><img src="assets/themes.png?v=05ac1a37" width="1180" height="820" alt="Preview of the Home page in the Forest colour theme (sample data)." loading="lazy"></a><figcaption>Six colour themes for the window and the HUD</figcaption></figure>
+    <figure><a href="assets/hud-coach.png?v=05e25c65" target="_blank" rel="noopener"><img src="assets/hud-coach.png?v=05e25c65" width="1180" height="820" alt="Preview of the heads-up display during a coach job (sample data): the next stop with its arrival time and a late chip, a ring with the passengers' rating, and the on-time score. There is no speedometer." loading="lazy"></a><figcaption>On a coach job: next stop, passengers' rating and on-time score</figcaption></figure>
+    <figure><a href="assets/coachjob.png?v=9475c2e1" target="_blank" rel="noopener"><img src="assets/coachjob.png?v=9475c2e1" width="1180" height="820" alt="Preview of the dashboard during a coach tour (sample data): passenger satisfaction with a chart of the rating over the job, status chips, and the timetable with planned and actual times and delays." loading="lazy"></a><figcaption>Dashboard on a coach job: rating chart and timetable</figcaption></figure>
+    <figure><a href="assets/logbook-coach.png?v=ecd585d4" target="_blank" rel="noopener"><img src="assets/logbook-coach.png?v=ecd585d4" width="1180" height="820" alt="Preview of the logbook with a coach tour selected (sample data): the passengers' rating, the on-time score, passengers carried, and what the job paid against what the game expected." loading="lazy"></a><figcaption>Logbook: coach jobs with rating, punctuality and expected income</figcaption></figure>
   </div>
 </section>
 
@@ -148,13 +158,13 @@
 <section id="good">
   <h2>Open and honest about this beta</h2>
   <ul class="plain">
-    <li><b>Early software.</b> Version 0.3.0 is a beta. It has been run in the real game, but only by a small group so far, and the coach score thresholds are still estimates. Report problems and expect updates.</li>
+    <li><b>Early software.</b> Version 0.4.0 is a beta. It has been run in the real game, but only by a small group so far, and the coach score thresholds are still estimates. Most of what is new in 0.4.0 has been tested with automated tests and a driving simulator, not yet with real drives, so expect rough edges. Report problems and expect updates.</li>
     <li><b>Windows only.</b> The plugin uses the game's Windows plugin system.</li>
     <li><b>The license server runs from a home PC.</b> I start it myself and expose it through a tunnel, so it can be offline at times. There are no guaranteed service hours. A working license keeps running offline for up to a week; use "Check again" on the License tab when it is back.</li>
     <li><b>Unsigned plugin.</b> Windows may warn about an unverified publisher because the DLL is not digitally signed. The zip's SHA-256 is shown on your account page so you can check the download before running the installer.</li>
     <li><b>Refunds.</b> Try everything for 14 days. If a paid key is not sorted out, contact us within 14 days for a fix or refund; see the <a href="terms.html">terms</a>.</li>
     <li><b>Multiplayer is untested.</b> Check the rules of any multiplayer service before using any plugin on it. The plugin only reads telemetry and does not change gameplay.</li>
-    <li><b>What we store.</b> Your email address, your key, and a one-way hash of your computer ID. The logbook, scores and settings stay on your computer; there is no analytics. You can delete your account at any time.</li>
+    <li><b>What we store.</b> Your email address, your key, and a one-way hash of your computer ID. The logbook, route maps, scores and settings stay on your computer; there is no analytics. The optional update notice asks which version is newest and sends only the plugin version and the game. You can delete your account at any time.</li>
     <li><b>Who runs this.</b> Built and supported by TheCodingDad (Tison Klomp), an individual in the Netherlands. See the <a href="legal-notice.html">legal notice</a>.</li>
     <li><b>Not affiliated with SCS Software.</b> This is an independent plugin. Euro Truck Simulator 2 and American Truck Simulator are trademarks of SCS Software.</li>
   </ul>
@@ -173,7 +183,11 @@
   <details><summary>Does it need internet while I drive?</summary><p>It checks in when the game starts and every few hours. In between it works offline for up to a week. The License tab shows your key's days and you can press "Check again".</p></details>
   <details><summary>What if the license server is offline?</summary><p>A working license keeps running offline for up to a week. Brief outages can happen because the server runs from a home PC. Try again later and use "Check again" on the License tab.</p></details>
   <details><summary>Does it work in multiplayer?</summary><p>That has not been tested yet. Check the rules of the service you play on first.</p></details>
-  <details><summary>Where is my logbook kept?</summary><p>On your own computer in <code>%LOCALAPPDATA%\TcdCoDriver\logbook.tsv</code>, with every finished delivery and coach job. You can export a CSV in any language from the Logbook tab. An online copy is planned for later.</p></details>
+  <details><summary>Where is my logbook kept?</summary><p>On your own computer in <code>%LOCALAPPDATA%\TcdCoDriver\logbook.tsv</code>, with every finished delivery and coach job. The route of each recent trip is in the <code>traces</code> folder next to it (the newest 150 are kept). You can export a CSV in any language from the Logbook tab. An online copy is planned for later.</p></details>
+  <details><summary>What is new in 0.4.0?</summary><p>A live trip assistant, a route map and charts for every trip, a deeper driving coach (steering, gears, brake heat, parking, rough roads), a Home page, Insights and Profile with a driver level and weekly challenges, a compare view, six colour themes, a layout editor for the HUD, pop-up cards for fines and tolls, a large summary when you stop, an arrangeable dashboard, settings profiles, a trip card you can share and an update notice. Older logbooks and settings load as they are.</p></details>
+  <details><summary>Can I move the parts of the HUD?</summary><p>Yes. In Settings choose "Arrange the HUD", then drag each part where you want it and use the sliders to resize or hide it. "Reset the layout" puts everything back. You can also save a whole setup as a named profile and switch between profiles.</p></details>
+  <details><summary>What does the update notice send?</summary><p>It asks the license server which version is newest and sends only the plugin version and the game: no key, no computer code, no logbook data. Nothing is stored about the request. If a newer version is available a notice appears in the window; you can turn the check off in Settings.</p></details>
+  <details><summary>What is the trip card?</summary><p>In the logbook, "Share trip card" saves a small page of one trip (the route, the score and the money) in your Documents folder and copies a short text to the clipboard. It is a file on your computer; nothing is uploaded.</p></details>
   <details><summary>How do I uninstall it?</summary><p>Run <code>Uninstall.bat</code> from the extracted zip. It removes only the plugin file and asks before touching your logbook or settings. See the <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs/blob/main/docs/installation.md">installation guide</a>.</p></details>
   <details><summary>How do I get help?</summary><p>Use the contact form on this site. Attach the end of <code>Documents\hry_core\ets2\hry_core.log</code> (or <code>...\ats\hry_core.log</code>) right after the problem, plus a screenshot. Do not post keys or email addresses in public GitHub issues.</p></details>
 </section>
@@ -188,7 +202,7 @@
 </main>
 
 <footer>
-  <span class="status"><span class="dot" aria-hidden="true"></span>Early version 0.3.0</span>
+  <span class="status"><span class="dot" aria-hidden="true"></span>Early version 0.4.0</span>
   <span>Built on <a href="https://github.com/Hary309/hry-core">hry-core</a> by Piotr Krupa (MIT license), Dear ImGui by Omar Cornut and MinHook by Tsuda Kageyu.</span>
   <span class="links"><a href="terms.html">Terms</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="legal-notice.html">Legal notice</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs">Documentation</a> &middot; <a href="https://github.com/TheCodingDad-TisonK/tcd-codriver/issues">Report a problem</a></span>
   
