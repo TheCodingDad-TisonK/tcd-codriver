@@ -3,23 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'; connect-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; connect-src 'none'">
 <meta name="referrer" content="no-referrer">
 <title>Contact - TCD Co-Driver</title>
 <meta name="description" content="Contact for TCD Co-Driver, a co-driver plugin for Euro Truck Simulator 2 and American Truck Simulator.">
 <meta name="theme-color" content="#070a0f">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f5a524'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='800' font-size='12' text-anchor='middle' fill='%231a1102'%3ETCD%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/site.css?v=86795f7c">
+<script>(function(){var r=document.documentElement,t=null;r.className+=' js';try{t=localStorage.getItem('tcd-theme')}catch(e){}if(t!=='light'&&t!=='dark'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}r.setAttribute('data-theme',t)})();</script>
+<link rel="stylesheet" href="assets/site.css?v=7a17fbfb">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a6.8 6.8 0 0 0 10.7 10.7z"/></symbol>
+</defs></svg>
 <header class="site scrolled">
   <div class="wrap bar">
     <a class="brand" href="index.html"><span class="mark" aria-hidden="true">TCD</span>TCD Co-Driver</a>
-    <nav aria-label="Main">
+    <nav id="nav" aria-label="Main">
       <a href="index.html#about">What it is</a><a href="index.html#features">Features</a><a href="index.html#how">How it works</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a><a href="contact.html">Contact</a>
       <a class="btn small" href="https://unhistorical-subglobular-marhta.ngrok-free.dev/register">Get a free key</a>
       
     </nav>
+    <div class="bar-tools"><button class="theme-btn" type="button" aria-label="Switch to light theme" title="Switch between dark and light"><svg class="sun" aria-hidden="true"><use href="#i-sun"/></svg><svg class="moon" aria-hidden="true"><use href="#i-moon"/></svg></button><button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button></div>
   </div>
 </header>
 <main class="page wrap">
@@ -45,5 +52,38 @@
     <div class="legal-line"><span>Not affiliated with SCS Software. Euro Truck Simulator 2 and American Truck Simulator are trademarks of SCS Software.</span></div>
   </div>
 </footer>
+<script>
+(function () {
+  var d = document;
+  var btn = d.querySelector('.menu-btn'), nav = d.getElementById('nav');
+  if (btn && nav) {
+    btn.addEventListener('click', function () { var o = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', o ? 'true' : 'false'); });
+    nav.addEventListener('click', function (e) { if (e.target.tagName === 'A') { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); } });
+  }
+  // dark or light: the choice is remembered in this browser; without one the page follows the system setting
+  var tbtn = d.querySelector('.theme-btn'), meta = d.querySelector('meta[name="theme-color"]'), root = d.documentElement, saved = false;
+  try { saved = !!localStorage.getItem('tcd-theme'); } catch (e) { saved = false; }
+  function paintTheme(t) {
+    root.setAttribute('data-theme', t);
+    if (meta) meta.setAttribute('content', t === 'light' ? '#f5f6f9' : '#070a0f');
+    if (tbtn) tbtn.setAttribute('aria-label', t === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+  }
+  paintTheme(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+  if (tbtn) {
+    tbtn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.classList.add('theming'); tbtn.classList.remove('spin'); void tbtn.offsetWidth; tbtn.classList.add('spin');
+      paintTheme(next);
+      try { localStorage.setItem('tcd-theme', next); saved = true; } catch (e) { saved = false; }
+      window.setTimeout(function () { root.classList.remove('theming'); }, 450);
+    });
+  }
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(prefers-color-scheme: light)');
+    var follow = function (e) { if (!saved) paintTheme(e.matches ? 'light' : 'dark'); };
+    if (mq.addEventListener) mq.addEventListener('change', follow); else if (mq.addListener) mq.addListener(follow);
+  }
+})();
+</script>
 </body>
 </html>
