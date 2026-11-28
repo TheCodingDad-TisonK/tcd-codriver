@@ -31,7 +31,7 @@
 </header>
 <main class="page wrap">
 <h1>Privacy policy</h1>
-<div class="doc"><p class="muted">Last updated 2026-11-25</p>
+<div class="doc"><p class="muted">Last updated 2026-11-28</p>
 <p>This policy explains what personal data TCD Co-Driver collects, why, who sees it, how long we keep it, and what your rights are. It describes what the software really does.</p>
 
 <h2>1. Who is responsible</h2>
@@ -44,26 +44,30 @@
   <li><strong>Payments.</strong> The note you enter when you say you paid (a PayPal transaction ID, or the name or email on your PayPal account) and when you sent it. The payment itself is made on PayPal; the details of the payment (such as your name, email, amount and transaction ID) are held in our PayPal account, not in our own database. We do not see card or bank details. <em>Why:</em> to check the payment and extend your key, and to keep records the law requires. <em>Basis:</em> performing the contract, and legal obligations.</li>
   <li><strong>Messages.</strong> If you use the contact form: your name, email address, the topic and your message. <em>Why:</em> to answer you. <em>Basis:</em> our legitimate interest in answering questions, or performing the contract.</li>
   <li><strong>Activity records.</strong> A short record of important actions, such as sign-up, key activation, payment decisions and emails that could not be sent, with the account they belong to. <em>Why:</em> security and fixing problems. <em>Basis:</em> legitimate interest.</li>
-  <li><strong>Technical data.</strong> When you use the service, your IP address is used briefly in the server's memory to limit abuse (for example too many sign-in attempts). It is not stored in our database. The plugin's optional update notice asks the server which version is newest and sends only the plugin version and the game, no key and no computer code; nothing is stored about that request, and it can be switched off in the plugin's settings. If the server is reached through a network service such as Tailscale, that service handles the connection.</li>
+  <li><strong>Community board (only if you switch it on).</strong> The community board is off until you switch it on in the plugin's settings. When it is on, the plugin sends the display name you choose, your driver level and title, your XP, how many badges you have earned, your average driving score, how many deliveries you have made and the distance delivered, your clean-job streaks and the game (ETS2 or ATS). It sends these with your signed license token, so the entry belongs to your key. The plugin sends an update when it starts and after each delivery. Anyone can see these details, and the day of the last update, on the community page of the website; your email address, key and computer code are never shown. <em>Why:</em> to show you on the board you chose to join. <em>Basis:</em> your consent, which you can withdraw at any time by switching the board off; that removes your entry from the server straight away.</li>
+  <li><strong>Technical data.</strong> When you use the service, your IP address is used briefly in the server's memory to limit abuse (for example too many sign-in attempts). It is not stored in our database. The plugin's optional update notice asks the server which version is newest and sends only the plugin version and the game, no key and no computer code; nothing is stored about that request, and it can be switched off in the plugin's settings. If the server is reached through a network service such as ngrok or Tailscale, that service handles the connection.</li>
 </ul>
-<p>Your logbook, driving scores and plugin settings stay on your own computer. TCD Co-Driver does not send them to us. If we ever add online history, it will be optional and this policy will be updated first.</p>
+<p>Your logbook, the details of each trip, the scores of each trip and your plugin settings stay on your own computer. TCD Co-Driver does not send them to us. The only exception is the short list of totals above, and only while you have the community board switched on. If we ever add online history, it will be optional and this policy will be updated first.</p>
 <p>We do not use advertising, analytics or tracking tools, and we do not sell your data.</p>
 
 <h2>3. Cookies</h2>
-<p>The license site sets two cookies that are strictly necessary for it to work: <code>sid</code> keeps you signed in (up to 14 days) and <code>csrf</code> protects forms against forgery (up to 30 days). We do not set any other cookies. The public landing page on GitHub Pages sets none of its own; GitHub may process visitors' IP addresses as described in its own privacy statement.</p>
+<p>The license site sets two cookies that are strictly necessary for it to work: <code>sid</code> keeps you signed in (up to 14 days) and <code>csrf</code> protects forms against forgery (up to 30 days). We do not set any other cookies. The public landing page on GitHub Pages sets none of its own; GitHub may process visitors' IP addresses as described in its own privacy statement. The website remembers your choice of a light or dark look in your browser's local storage. Its community page shows the discussions through the giscus widget; if you sign in to that widget with GitHub to post, giscus keeps a sign-in token in your browser's local storage until you sign out.</p>
 
 <h2>4. Who else receives data</h2>
 <ul>
   <li><strong>PayPal</strong>, which processes your payment under its own privacy policy.</li>
   <li><strong>An email provider</strong> that delivers our service emails (confirmation links, password resets, expiry notices, replies).</li>
-  <li><strong>GitHub</strong>, which hosts the public landing page.</li>
-  <li><strong>Tailscale</strong>, if the server is reached through its network.</li>
+  <li><strong>GitHub</strong>, which hosts the public landing page and its community page, and stores the discussions on that page (GitHub Discussions). Posting there needs a GitHub account and is covered by GitHub's own privacy statement.</li>
+  <li><strong>giscus</strong> (giscus.app), the open-source widget that shows those GitHub Discussions on the community page and posts what you write there for you.</li>
+  <li><strong>ngrok or Tailscale</strong>, the network service the license server is reached through.</li>
 </ul>
 <p>These providers may process data outside the European Economic Area. Where they do, they rely on the safeguards described in their own policies. We share only what is needed for each purpose.</p>
 
 <h2>5. How long we keep data</h2>
 <ul>
   <li>Account, key, computer codes and payment notes: until you delete your account. Deleting your account from your account page removes them straight away.</li>
+  <li>Community board entry: until you switch the board off or delete your account. While your key is not working, the entry is not shown.</li>
+  <li>Posts in the discussions on the community page: on GitHub, until you or we delete them.</li>
   <li>Contact messages: until handled, then deleted after 12 months. If you delete your account we also delete messages sent with your email address.</li>
   <li>Activity records: up to 12 months.</li>
   <li>Records we must keep by law, such as payment records in our PayPal account: as long as the law requires.</li>
