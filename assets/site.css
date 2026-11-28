@@ -285,6 +285,18 @@ footer .links a{display:inline;padding:0;margin-right:2px;color:var(--muted)}
 .board .tools{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:18px}
 .giscus{margin-top:18px}
 
+/* ---------------------------------------------------------------- page not found */
+.notfound{padding:16px 0 40px;text-align:center}
+.nf-number{font:800 clamp(96px,20vw,190px)/.9 var(--display);letter-spacing:-.06em;margin:6px 0 4px;
+  background:linear-gradient(120deg,var(--accent2),var(--accent) 52%,var(--accent3));
+  -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.notfound .nf-title{font:700 clamp(23px,3.4vw,32px)/1.2 var(--display);letter-spacing:-.02em;margin:0 0 14px}
+.notfound .lede{margin-bottom:26px}
+.notfound .cta{justify-content:center;margin-bottom:26px}
+.nf-links{display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:center;margin-bottom:18px}
+.nf-links a{color:var(--muted);font-size:15px;text-decoration:underline;text-underline-offset:3px}
+.nf-links a:hover{color:var(--accent)}
+
 /* ---------------------------------------------------------------- motion */
 .js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
 .js .rv.in{opacity:1;transform:none}
