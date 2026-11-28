@@ -1,0 +1,88 @@
+/* giscus theme for TCD Co-Driver - dark, matched to website/site.css. Served from the site and loaded inside the giscus iframe. */
+main {
+  --color-prettylights-syntax-comment: #6f7c90;
+  --color-prettylights-syntax-constant: #56b6f7;
+  --color-prettylights-syntax-entity: #c4a7ff;
+  --color-prettylights-syntax-storage-modifier-import: #eef1f6;
+  --color-prettylights-syntax-entity-tag: #3dd68c;
+  --color-prettylights-syntax-keyword: #ff8a3d;
+  --color-prettylights-syntax-string: #ffcb6b;
+  --color-prettylights-syntax-variable: #ffcb6b;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #f47067;
+  --color-prettylights-syntax-invalid-illegal-text: #eef1f6;
+  --color-prettylights-syntax-invalid-illegal-bg: #4a1f26;
+  --color-prettylights-syntax-carriage-return-text: #eef1f6;
+  --color-prettylights-syntax-carriage-return-bg: #4a2020;
+  --color-prettylights-syntax-string-regexp: #3dd68c;
+  --color-prettylights-syntax-markup-list: #ffcb6b;
+  --color-prettylights-syntax-markup-heading: #56b6f7;
+  --color-prettylights-syntax-markup-italic: #eef1f6;
+  --color-prettylights-syntax-markup-bold: #eef1f6;
+  --color-prettylights-syntax-markup-deleted-text: #ffd8d3;
+  --color-prettylights-syntax-markup-deleted-bg: #4a1f26;
+  --color-prettylights-syntax-markup-inserted-text: #b4f1b4;
+  --color-prettylights-syntax-markup-inserted-bg: #163a25;
+  --color-prettylights-syntax-markup-changed-text: #ffddb0;
+  --color-prettylights-syntax-markup-changed-bg: #3d2c12;
+  --color-prettylights-syntax-markup-ignored-text: #9aa7ba;
+  --color-prettylights-syntax-markup-ignored-bg: #1d3450;
+  --color-prettylights-syntax-meta-diff-range: #c4a7ff;
+  --color-prettylights-syntax-brackethighlighter-angle: #6f7c90;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #47546a;
+  --color-btn-text: #eef1f6;
+  --color-btn-bg: #18212f;
+  --color-btn-border: #2d394d;
+  --color-btn-shadow: 0 0 transparent;
+  --color-btn-inset-shadow: 0 0 transparent;
+  --color-btn-hover-bg: #222d3e;
+  --color-btn-hover-border: #3d4b63;
+  --color-btn-active-bg: #222d3e;
+  --color-btn-active-border: #47566f;
+  --color-btn-primary-text: #1a1102;
+  --color-btn-primary-bg: #f5a524;
+  --color-btn-primary-border: #f5a524;
+  --color-btn-primary-shadow: 0 0 transparent;
+  --color-btn-primary-inset-shadow: 0 0 transparent;
+  --color-btn-primary-hover-bg: #ffcb6b;
+  --color-btn-primary-hover-border: #ffcb6b;
+  --color-action-list-item-default-hover-bg: rgba(255,255,255,.05);
+  --color-segmented-control-bg: #121926;
+  --color-segmented-control-button-bg: #18212f;
+  --color-segmented-control-button-selected-border: #47566f;
+  --color-fg-default: #eef1f6;
+  --color-fg-muted: #9aa7ba;
+  --color-fg-subtle: #6f7c90;
+  --color-canvas-default: #0d1219;
+  --color-canvas-overlay: #121926;
+  --color-canvas-inset: #0a0e15;
+  --color-canvas-subtle: #121926;
+  --color-border-default: #2d394d;
+  --color-border-muted: #212b3b;
+  --color-neutral-muted: rgba(154,167,186,.18);
+  --color-accent-fg: #ffcb6b;
+  --color-accent-emphasis: #f5a524;
+  --color-accent-muted: rgba(245,165,36,.3);
+  --color-accent-subtle: rgba(245,165,36,.12);
+  --color-success-fg: #3dd68c;
+  --color-attention-fg: #ffcb6b;
+  --color-attention-muted: rgba(245,165,36,.3);
+  --color-attention-subtle: rgba(245,165,36,.12);
+  --color-danger-fg: #ff7b72;
+  --color-danger-muted: rgba(255,123,114,.3);
+  --color-danger-subtle: rgba(255,123,114,.1);
+  --color-primer-shadow-inset: 0 0 transparent;
+  --color-scale-gray-7: #18212f;
+  --color-scale-blue-8: #1d3450;
+  --color-social-reaction-bg-hover: var(--color-scale-gray-7);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
+}
+
+/* Tidy the thread: one comment per row, clear spacing, editor at the top. */
+.gsc-comments > .gsc-header { order: 1; padding-bottom: 1rem; }
+.gsc-comments > .gsc-comment-box { order: 2; margin-bottom: 1.25rem; }
+.gsc-comments > .gsc-timeline { order: 3; }
+.gsc-timeline { flex-direction: column; }
+.gsc-comment { margin-bottom: 1.25rem; }
+.gsc-comment-card { border-radius: 12px; }
+.gsc-reactions-count { display: none; }
+main { font-family: "Inter", "Segoe UI", system-ui, sans-serif; }

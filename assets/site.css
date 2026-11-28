@@ -283,7 +283,10 @@ footer .links a{display:inline;padding:0;margin-right:2px;color:var(--muted)}
 .board td.num{font-variant-numeric:tabular-nums;color:var(--muted)}
 .board td.rank{color:var(--accent);font-weight:800}
 .board .tools{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:18px}
-.giscus{margin-top:18px}
+.giscus{margin-top:18px;padding:8px 14px 16px;border:1px solid var(--line);border-radius:16px;
+  background:linear-gradient(180deg,var(--surface),var(--panel));overflow:hidden}
+.giscus iframe.giscus-frame{display:block;width:100%;min-height:420px;border:0;color-scheme:dark}
+:root[data-theme=light] .giscus iframe.giscus-frame{color-scheme:light}
 
 /* ---------------------------------------------------------------- page not found */
 .notfound{padding:16px 0 40px;text-align:center}
