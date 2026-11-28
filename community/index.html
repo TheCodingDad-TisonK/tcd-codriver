@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<base href="../">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data: https://avatars.githubusercontent.com; style-src 'self' 'unsafe-inline'; script-src 'unsafe-inline' https://giscus.app; base-uri 'self'; form-action 'none'; connect-src 'self' https://unhistorical-subglobular-marhta.ngrok-free.dev; frame-src https://giscus.app">
+<meta name="referrer" content="no-referrer">
+<title>Community - TCD Co-Driver</title>
+<meta name="description" content="Community for TCD Co-Driver, a co-driver plugin for Euro Truck Simulator 2 and American Truck Simulator.">
+<meta name="theme-color" content="#070a0f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f5a524'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='800' font-size='12' text-anchor='middle' fill='%231a1102'%3ETCD%3C/text%3E%3C/svg%3E">
+<script>(function(){var r=document.documentElement,t=null;r.className+=' js';try{t=localStorage.getItem('tcd-theme')}catch(e){}if(t!=='light'&&t!=='dark'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}r.setAttribute('data-theme',t)})();</script>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a6.8 6.8 0 0 0 10.7 10.7z"/></symbol>
+</defs></svg>
+<header class="site scrolled">
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true">TCD</span>TCD Co-Driver</a>
+    <nav id="nav" aria-label="Main">
+      <a href="index.html#about">What it is</a><a href="index.html#features">Features</a><a href="index.html#how">How it works</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a><a href="community/">Community</a><a href="contact.html">Contact</a>
+      <a class="btn small" href="https://unhistorical-subglobular-marhta.ngrok-free.dev/register">Get a free key</a>
+      
+    </nav>
+    <div class="bar-tools"><button class="theme-btn" type="button" aria-label="Switch to light theme" title="Switch between dark and light"><svg class="sun" aria-hidden="true"><use href="#i-sun"/></svg><svg class="moon" aria-hidden="true"><use href="#i-moon"/></svg></button><button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button></div>
+  </div>
+</header>
+<main class="page wrap">
+<h1>Community</h1>
+<div class="doc community-doc">
+  <p class="lede">Drivers who switch on the community board in TCD Co-Driver choose to share a few totals here: a display name, level, title, badges, average score, deliveries and distance. Everything else stays on their own computer.</p>
+  <div id="boardStatus" class="status"><span class="dot" aria-hidden="true"></span><span id="boardStatusText">Loading the board&hellip;</span></div>
+  <div id="board" class="board" data-api="https://unhistorical-subglobular-marhta.ngrok-free.dev" hidden>
+    <div class="board-scroll">
+      <table>
+        <thead><tr><th>#</th><th>Driver</th><th>XP</th><th>Badges</th><th>Average</th><th>Deliveries</th><th>Distance</th><th>Clean streak</th><th>Game</th><th>Updated</th></tr></thead>
+        <tbody id="boardRows"></tbody>
+      </table>
+    </div>
+    <div class="tools"><button class="btn small ghost" id="boardRefresh" type="button">Refresh the board</button><span class="fine" id="boardFoot"></span></div>
+  </div>
+  <h2>How to join</h2>
+  <p>In the plugin, open <strong>Settings</strong>, switch on the community board and choose a display name. Your entry appears after the next delivery and updates as you drive. Switch it off at any time and your entry is removed straight away. Nobody is on the board unless they turn it on themselves.</p>
+  <p class="fine">The board is read from the license server, which runs from a home PC. It can be offline at times; when it is, the page says so and the board returns when the server does.</p>
+  <h2>Discussions</h2>
+  
+  <p>Questions, ideas and bug reports from the community live below. Posting needs a GitHub account.</p>
+  <div class="giscus"><script src="https://giscus.app/client.js" data-repo="TheCodingDad-TisonK/tcd-codriver" data-repo-id="R_kgDOV74CYw" data-category="Announcements" data-category-id="DIC_kwDOV74CY84DMMPS" data-mapping="number" data-term="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async></script></div>
+  
+  
+</div>
+<script>
+(function () {
+  'use strict';
+  var box = document.getElementById('board');
+  var statusBox = document.getElementById('boardStatus');
+  var statusText = document.getElementById('boardStatusText');
+  var rows = document.getElementById('boardRows');
+  var foot = document.getElementById('boardFoot');
+  var api = box.getAttribute('data-api');
+  function node(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined && text !== null) n.textContent = String(text);
+    return n;
+  }
+  function say(text, bad) {
+    statusText.textContent = text;
+    statusBox.querySelector('.dot').style.background = bad ? 'var(--accent)' : 'var(--good)';
+  }
+  function num(v) { return typeof v === 'number' ? v.toLocaleString() : '\u2014'; }
+  function show(data) {
+    while (rows.firstChild) rows.removeChild(rows.firstChild);
+    (data.entries || []).forEach(function (e) {
+      var tr = node('tr');
+      var name = node('td', 'name', e.name);
+      name.appendChild(node('small', '', e.title || ''));
+      tr.appendChild(node('td', 'num rank', e.rank));
+      tr.appendChild(name);
+      tr.appendChild(node('td', 'num', num(e.xp)));
+      tr.appendChild(node('td', 'num', e.badges + '/' + e.badgesTotal));
+      tr.appendChild(node('td', 'num', e.avgScore === null ? '\u2014' : e.avgScore));
+      tr.appendChild(node('td', 'num', num(e.deliveries)));
+      tr.appendChild(node('td', 'num', num(e.km) + ' km'));
+      tr.appendChild(node('td', 'num', num(e.cleanStreak)));
+      tr.appendChild(node('td', '', String(e.game || '').toUpperCase()));
+      tr.appendChild(node('td', 'num', e.updated || ''));
+      rows.appendChild(tr);
+    });
+    foot.textContent = (data.count || 0) + ' driver' + (data.count === 1 ? '' : 's') + ' on the board';
+    box.hidden = false;
+    say('Board loaded', false);
+  }
+  function fail() {
+    box.hidden = true;
+    say('The license server is not answering right now. The board will be back when it does.', true);
+  }
+  function load() {
+    say('Loading the board\u2026', false);
+    fetch(api + '/api/community/board', { headers: { 'ngrok-skip-browser-warning': '1' }, cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error(String(r.status))); })
+      .then(function (d) { if (d && d.ok) show(d); else fail(); })
+      .catch(fail);
+  }
+  document.getElementById('boardRefresh').addEventListener('click', load);
+  load();
+})();
+</script>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px"><span class="mark" aria-hidden="true">TCD</span>TCD Co-Driver</a>
+        <p><span class="status"><span class="dot" aria-hidden="true"></span>Early version 0.6.0</span></p>
+      </div>
+      <div>
+        <b>On the site</b>
+        <a href="index.html#features">Features</a><a href="index.html#how">How it works</a><a href="index.html#pricing">Pricing</a><a href="index.html#faq">FAQ</a><a href="community/">Community</a>
+      </div>
+      <div>
+        <b>Legal and help</b>
+        <a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="legal-notice.html">Legal notice</a><a href="contact.html">Contact</a><a href="https://github.com/TheCodingDad-TisonK/tcd-codriver-docs">Documentation</a><a href="https://github.com/TheCodingDad-TisonK/tcd-codriver/issues">Report a problem</a>
+      </div>
+    </div>
+    <div class="legal-line"><span>Not affiliated with SCS Software. Euro Truck Simulator 2 and American Truck Simulator are trademarks of SCS Software.</span></div>
+  </div>
+</footer>
+<script>
+(function () {
+  var d = document;
+  var btn = d.querySelector('.menu-btn'), nav = d.getElementById('nav');
+  if (btn && nav) {
+    btn.addEventListener('click', function () { var o = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', o ? 'true' : 'false'); });
+    nav.addEventListener('click', function (e) { if (e.target.tagName === 'A') { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); } });
+  }
+  // dark or light: the choice is remembered in this browser; without one the page follows the system setting
+  var tbtn = d.querySelector('.theme-btn'), meta = d.querySelector('meta[name="theme-color"]'), root = d.documentElement, saved = false;
+  try { saved = !!localStorage.getItem('tcd-theme'); } catch (e) { saved = false; }
+  function paintTheme(t) {
+    root.setAttribute('data-theme', t);
+    if (meta) meta.setAttribute('content', t === 'light' ? '#f5f6f9' : '#070a0f');
+    if (tbtn) tbtn.setAttribute('aria-label', t === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+  }
+  paintTheme(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+  if (tbtn) {
+    tbtn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.classList.add('theming'); tbtn.classList.remove('spin'); void tbtn.offsetWidth; tbtn.classList.add('spin');
+      paintTheme(next);
+      try { localStorage.setItem('tcd-theme', next); saved = true; } catch (e) { saved = false; }
+      window.setTimeout(function () { root.classList.remove('theming'); }, 450);
+    });
+  }
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(prefers-color-scheme: light)');
+    var follow = function (e) { if (!saved) paintTheme(e.matches ? 'light' : 'dark'); };
+    if (mq.addEventListener) mq.addEventListener('change', follow); else if (mq.addListener) mq.addListener(follow);
+  }
+})();
+</script>
+</body>
+</html>
